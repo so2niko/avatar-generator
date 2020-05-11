@@ -18,7 +18,11 @@ export default class Avatar{
         this.ctx.fillStyle = this.bgColor;
         this.ctx.fillRect(0, 0, this.size, this.size);
 
-        this.renderRandomImage();
+        // this.renderRandomImage();
+        for(let i = 0; i < 3; i++){
+            this.renderVerticLine(i, 4 - i);
+        }
+        
     }
 
     renderRandomImage = _ =>{
@@ -38,9 +42,17 @@ export default class Avatar{
         this.ctx.fillRect(x, y, this.boxSize, this.boxSize);
     }
 
-    renderBaseLine = _ =>{
-        const xStart = this.border + this.boxSize * 2;
+    renderVerticLine = (lineN = 0, shift = 0) =>{
+        const xStart = this.border + this.boxSize * lineN;
+        const parallelStart = this.border + this.boxSize * shift;
+        const paddingBorder = this.size - this.boxSize;
+        for(let i = this.border; i < paddingBorder; i += this.boxSize){
+            const color = Math.random() > .5? this.color: this.bgColor;
+            this.renderBox(xStart, i, color);
+            parallelStart != xStart? this.renderBox(parallelStart, i, color): null;
+        }
         
+
     }
 
     static init(){
