@@ -6,9 +6,8 @@ export default class Avatar{
     bgColor = '#f5f5f5';
     color = '#333333';
     canvasSelector = '.canvas-avatar';
-    
+
     constructor(){
-        console.log(this);
         this.canvas = document.querySelector(this.canvasSelector);
         this.ctx = this.canvas.getContext('2d');
         this.render();

@@ -47,3 +47,8 @@ input{
 canvas:hover{
     filter: blur(3px);
 }
+
+small{
+    color: grey;
+    font: 7pt Arial;
+}

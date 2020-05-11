@@ -3,7 +3,7 @@ export default class Controller{
     selectors = {
         btn     : '.btn-generate',
         inpMain : '.inp-color-main',
-        inpBg  : '.inp-color-bg' 
+        inpBg   : '.inp-color-bg' 
     }
 
     static state = null;
@@ -30,20 +30,15 @@ export default class Controller{
 
     addListeners = _ =>{
         this.dom.btn.addEventListener('click', this.handlerClickBtnGenerate);
-        this.dom.inpMain.addEventListener('input', this.handleInputColor);
-        this.dom.inpBg.addEventListener('input', this.handleInputColorBg);
+        this.dom.inpMain.addEventListener('input', ev => this.handleInputColor(ev, 'color'));
+        this.dom.inpBg.addEventListener('input', ev => this.handleInputColor(ev, 'bgColor'));
     }
 
     handlerClickBtnGenerate = _ =>{
         this.ava.render();
     }
 
-    handleInputColor = ev =>{
-
-    }
-
-    handleInputColorBg = ev =>{
-
-    }
-    
+    handleInputColor = (ev, name) =>{
+        this.ava[name] = ev.target.value;
+    } 
 }
