@@ -1,3 +1,3 @@
-import Avatar from './avatar.js';
+import Controller from './Controller.js';
 
-Avatar.init();
+Controller.init();

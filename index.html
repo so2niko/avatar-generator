@@ -6,8 +6,19 @@
     <title>Avatar generator</title>
     <link rel="stylesheet" href="./style/main.css">
 </head>
-<body>
-    <canvas width="256" height="256" class="canvas-avatar"></canvas>
+<body class="flex-center flex-col">
+    <div class="interface flex-center flex-col">
+        <div class="inp-button m-b-15">
+            <button class="btn-generate b-r-5">Generate</button>
+        </div>
+        <div class="inp-color flex-center m-b-15">
+            <input type="color" value="#333333" >
+            <input type="color" value="#f5f5f5">
+        </div>
+    </div>
+    <canvas width="256" height="256" 
+        class="canvas-avatar b-r-5"
+        title="Right mouse button for save"></canvas>
     <script src="./app/main.js" type="module"></script>
 </body>
 </html>

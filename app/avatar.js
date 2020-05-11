@@ -4,7 +4,7 @@ export default class Avatar{
     border = 8;
     boxSize = 48;
     bgColor = '#f5f5f5';
-    color = '#333';
+    color = '#333333';
     canvasSelector = '.canvas-avatar';
     constructor(){
         console.log(this);

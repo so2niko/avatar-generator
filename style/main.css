@@ -1,11 +1,49 @@
-body{
+.flex-col{
+    flex-direction: column;
+}
+
+.flex-center{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    padding: 15px;
+}
+
+.m-b-15{
+    margin-bottom: 15px;
+}
+
+.b-r-5{
+    border-radius: 5px;
 }
 
 canvas{
-    border: 1px solid #333;
+    border: 1px solid #333333;
+    margin: 5px;
+}
+
+body{
+    padding: 15px;
+    background-color: #f3f3f3;
+}
+
+.btn-generate{
+    font: 18pt Arial;
+    padding: 10px;
+    color: #f3f3f3;
+    background-color: #333333;
+    user-select: none;
+}
+
+.btn-generate:hover{
+    color: #333333;
+    background-color: #f3f3f3;
+
+}
+
+input{ 
+    padding: 5px;
+}
+
+canvas:hover{
+    filter: blur(3px);
 }
