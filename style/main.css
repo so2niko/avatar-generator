@@ -32,12 +32,12 @@ body{
     color: #f3f3f3;
     background-color: #333333;
     user-select: none;
+    
 }
 
 .btn-generate:hover{
     color: #333333;
     background-color: #f3f3f3;
-
 }
 
 input{ 
