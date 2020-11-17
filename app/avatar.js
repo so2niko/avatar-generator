@@ -54,6 +54,13 @@ export default class Avatar{
         }
     }
 
+    download = () => {
+        const img = this.canvas.toBlob(blob => {
+            const url = URL.createObjectURL(blob, blob.type);
+            window.open(url);
+        }, 'image/png');
+    }
+
     static init(){
         Avatar.state = new Avatar();
     }

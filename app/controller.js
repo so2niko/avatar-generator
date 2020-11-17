@@ -3,7 +3,8 @@ export default class Controller{
     selectors = {
         btn     : '.btn-generate',
         inpMain : '.inp-color-main',
-        inpBg   : '.inp-color-bg' 
+        inpBg   : '.inp-color-bg', 
+        canvasSelector : '.canvas-avatar'
     }
 
     static state = null;
@@ -32,6 +33,7 @@ export default class Controller{
         this.dom.btn.addEventListener('click', this.handlerClickBtnGenerate);
         this.dom.inpMain.addEventListener('input', ev => this.handleInputColor(ev, 'color'));
         this.dom.inpBg.addEventListener('input', ev => this.handleInputColor(ev, 'bgColor'));
+        this.dom.canvasSelector.addEventListener('click', this.handleDownload);
     }
 
     handlerClickBtnGenerate = _ =>{
@@ -41,4 +43,8 @@ export default class Controller{
     handleInputColor = (ev, name) =>{
         this.ava[name] = ev.target.value;
     } 
+
+    handleDownload = () => {
+        this.ava.download();
+    }
 }

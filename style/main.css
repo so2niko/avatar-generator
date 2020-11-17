@@ -21,6 +21,10 @@ canvas{
     margin: 5px;
 }
 
+canvas:hover{
+    cursor: pointer;
+}
+
 body{
     padding: 15px;
     background-color: #f3f3f3;
